@@ -1,0 +1,3 @@
+@mixin transition($transitionProperty: all, $speed: .2s) {
+  transition: $transitionProperty $speed var(--ease-in-out);
+}

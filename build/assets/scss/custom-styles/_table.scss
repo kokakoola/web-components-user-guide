@@ -1,0 +1,16 @@
+table, th, tr, td, tbody, tfoot {
+  margin: 0;
+  border: 2px solid var(--color-white-dark);
+  padding: var(--space-sm);
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  white-space: normal;
+  width: 100%;
+}
+
+td {
+  color: var(--color-black)
+}

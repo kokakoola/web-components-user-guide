@@ -1,0 +1,90 @@
+// --------------------------------
+
+// (START) Global Editor code https://codyhouse.co/ds/globals/colors
+
+// --------------------------------
+
+:root,
+[data-theme='default'] {
+  // main
+   @include defineColorHSL(--color-primary-darker, 120, 55%, 25%);
+    @include defineColorHSL(--color-primary-dark, 120, 55%, 35%);
+    @include defineColorHSL(--color-primary, 120, 55%, 45%);
+    @include defineColorHSL(--color-primary-light, 120, 55%, 55%);
+    @include defineColorHSL(--color-primary-lighter, 120, 55%, 65%);
+
+    @include defineColorHSL(--color-accent-darker, 208, 64%, 4%);
+    @include defineColorHSL(--color-accent-dark, 208, 64%, 14%);
+    @include defineColorHSL(--color-accent, 208, 64%, 24%);
+    @include defineColorHSL(--color-accent-light, 208, 64%, 34%);
+    @include defineColorHSL(--color-accent-lighter, 208, 64%, 44%);
+
+    @include defineColorHSL(--color-secondary-darker, 155, 66%, 21%);
+    @include defineColorHSL(--color-secondary-dark, 155, 66%, 31%);
+    @include defineColorHSL(--color-secondary, 155, 66%, 41%);
+    @include defineColorHSL(--color-secondary-light, 155, 66%, 51%);
+    @include defineColorHSL(--color-secondary-lighter, 155, 66%, 61%);
+
+    @include defineColorHSL(--color-tertiary-dark, 16, 100%, 27%);
+    @include defineColorHSL(--color-tertiary, 22, 100%, 50%);
+    @include defineColorHSL(--color-tertiary-light, 31, 100%, 45%);
+
+  // customs
+  @include defineColorHSL(--color-primary-accent, 67, 86%, 43%);
+  @include defineColorHSL(--color-secondary-accent-light, 177, 62%, 34%);
+  @include defineColorHSL(--color-secondary-accent-dark, 144, 67%, 47%);
+
+  @include defineColorHSL(--color-black, 211, 14%, 33%);
+  @include defineColorHSL(--color-white, 0, 0%, 100%);
+  @include defineColorHSL(--color-white-dark, 0, 0%, 90%);
+  @include defineColorHSL(--color-white-darker, 0, 0%, 80%);
+
+  // feedback
+  @include defineColorHSL(--color-warning-darker, 40, 100%, 50%);
+  @include defineColorHSL(--color-warning-dark, 40, 100%, 60%);
+  @include defineColorHSL(--color-warning, 40, 100%, 70%);
+  @include defineColorHSL(--color-warning-light, 40, 100%, 80%);
+  @include defineColorHSL(--color-warning-lighter, 40, 100%, 90%);
+
+  @include defineColorHSL(--color-success-darker, 138, 55%, 32%);
+  @include defineColorHSL(--color-success-dark, 138, 55%, 42%);
+  @include defineColorHSL(--color-success, 138, 55%, 52%);
+  @include defineColorHSL(--color-success-light, 138, 55%, 62%);
+  @include defineColorHSL(--color-success-lighter, 138, 55%, 72%);
+
+  @include defineColorHSL(--color-error-darker, 10, 70%, 29%);
+  @include defineColorHSL(--color-error-dark, 10, 70%, 39%);
+  @include defineColorHSL(--color-error, 10, 70%, 49%);
+  @include defineColorHSL(--color-error-light, 10, 70%, 59%);
+  @include defineColorHSL(--color-error-lighter, 10, 70%, 69%);
+
+  // color contrasts
+  @include defineColorHSL(--color-bg, 0, 0%, 100%);
+  @include defineColorHSL(--color-contrast-lower, 180, 16%, 97%);
+  @include defineColorHSL(--color-contrast-low, 180, 17%, 92%);
+  @include defineColorHSL(--color-contrast-medium, 177, 16%, 74%);
+  @include defineColorHSL(--color-contrast-high, 180, 15%, 59%);
+  @include defineColorHSL(--color-contrast-higher, 180, 16%, 54%);
+
+  // custom colors
+
+
+  // gradients
+  --gradient-primary: linear-gradient(45deg, var(--color-primary-darker), var(--color-primary-lighter));
+  --gradient-secondary: linear-gradient(45deg, var(--color-secondary), var(--color-accent));
+  --gradient-accent: linear-gradient(-45deg, var(--color-accent), var(--color-primary));
+
+}
+
+// --------------------------------
+
+// (END) Global Editor Code
+
+// --------------------------------
+body {
+  background-color: var(--color-bg, white);
+}
+// additional color
+.color-contrast-low {
+  color: var(--color-contrast-low);
+}

@@ -1,0 +1,58 @@
+footer {
+  line-height: var(--block-line-height);
+  @include fontSmooth;
+  .container {
+    width: 100%;
+  }
+  a,
+  .link {
+    color: #fff;
+    &:hover {
+      color: #ffffffb8;
+      text-decoration: underline;
+    }
+  }
+
+  @supports (--css: variables) {
+    a,
+    .link {
+      color: var(--color-white);
+      &:hover {
+        color: alpha(var(--color-white), 0.7);
+      }
+    }
+  }
+
+  .grid:last-of-type {
+    color: #ffffffb8;
+    e-icon,
+    a {
+      color: #ffffffb8;
+    }
+  }
+
+  @supports (--css: variables) {
+    .grid:last-of-type {
+      color: alpha(var(--color-white), 0.7);
+      e-icon,
+      a {
+        color: alpha(var(--color-white), 0.7);
+      }
+    }
+  }
+}
+
+footer a {
+  white-space: nowrap;
+}
+
+.flex-order-1 {
+  order: 1;
+  @include breakpoint(md) {
+    order: 0;
+  }
+}
+
+.line-height-2 {
+  line-height: 2;
+}

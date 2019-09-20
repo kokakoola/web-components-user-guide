@@ -1,0 +1,17 @@
+:root,
+[data-theme='default'] {
+  @include defineColorHSL(--color-facebook, 220, 46%, 48%);
+  @include defineColorHSL(--color-facebook-dark, 220, 46%, 38%);
+
+  @include defineColorHSL(--color-linkedin, 199, 100%, 37%);
+  @include defineColorHSL(--color-linkedin-dark, 204, 62%, 34%);
+
+  @include defineColorHSL(--color-instagram, 334, 69%, 52%);
+  @include defineColorHSL(--color-instagram-dark, 343, 48%, 49%);
+
+  @include defineColorHSL(--color-twitter, 203, 89%, 53%);
+  @include defineColorHSL(--color-twitter-dark, 207, 69%, 49%);
+
+  @include defineColorHSL(--color-youtube, 0, 100%, 50%);
+  @include defineColorHSL(--color-youtube-dark, 5, 63%, 50%);
+}

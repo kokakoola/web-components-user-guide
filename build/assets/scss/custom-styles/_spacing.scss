@@ -1,0 +1,74 @@
+// --------------------------------
+
+// (START) Global Editor code https://codyhouse.co/ds/globals/spacing
+
+// --------------------------------
+
+:root {
+  --space-unit: 1em;
+  --space-xxxxs: calc(0.125 * var(--space-unit));
+  --space-xxxs: calc(0.25 * var(--space-unit));
+  --space-xxs: calc(0.375 * var(--space-unit));
+  --space-xs: calc(0.5 * var(--space-unit));
+  --space-sm: calc(0.75 * var(--space-unit));
+  --space-md: calc(1 * var(--space-unit));
+  --space-lg: calc(1 * var(--space-unit));
+  --space-xl: calc(1.25 * var(--space-unit));
+  --space-xxl: calc(4 * var(--space-unit));
+  --space-xxxl: calc(6 * var(--space-unit));
+  --space-xxxxl: calc(8 * var(--space-unit));
+  --component-padding: var(--space-md);
+}
+
+@supports(--css: variables) {
+  :root {
+    @include breakpoint(md) {
+      --space-unit: 1.25em;
+      --space-xxxxs: calc(0.125 * var(--space-unit));
+      --space-xxxs: calc(0.25 * var(--space-unit));
+      --space-xxs: calc(0.375 * var(--space-unit));
+      --space-xs: calc(0.5 * var(--space-unit));
+      --space-sm: calc(0.75 * var(--space-unit));
+      --space-md: calc(1.25 * var(--space-unit));
+      --space-lg: calc(2 * var(--space-unit));
+      --space-xl: calc(3.25 * var(--space-unit));
+      --space-xxl: calc(5.25 * var(--space-unit));
+      --space-xxxl: calc(8.5 * var(--space-unit));
+      --space-xxxxl: calc(13.75 * var(--space-unit));
+      --component-padding: var(--space-md);
+    }
+    @include breakpoint(lg) {
+      --space-unit: 1.4em;
+    }
+  }
+}
+
+/*@supports (--css: variables) {
+  :root {
+    --component-padding: var(--space-sm);
+    --space-unit: 0.44em;
+
+    @include breakpoint(xs) {
+      --space-unit: 0.85em;
+    }
+
+    @include breakpoint(sm) {
+      --space-unit: 1em;
+    }
+
+    @include breakpoint(md) {
+      --space-unit: 1.25em;
+      --component-padding: var(--space-md);
+    }
+
+    @include breakpoint(lg) {
+      --space-unit: 1.4em;
+    }
+  }
+}*/
+
+// --------------------------------
+
+// (END) Global Editor Code
+
+// --------------------------------

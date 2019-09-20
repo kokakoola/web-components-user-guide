@@ -1,0 +1,215 @@
+// --------------------------------
+
+// (START) Global Editor code https://codyhouse.co/ds/globals/typography
+
+// --------------------------------
+
+:root {
+  // font family
+  --font-primary: 'UniNeue', sans-serif;
+  --font-secondary: 'UniNeue', sans-serif;
+
+  --text-base-size: 1.125rem;
+  --text-p-size: 1em;
+
+  // body font size
+  --text-xs: .75em;
+  --text-sm: .85em;
+  --text-md: 1em;
+  --text-lg: 1.5em;
+  --text-xl: 2.3em;
+  --text-xxl: 3.4em;
+  --text-xxxl: 4.2em;
+
+  // line-height
+  --body-line-height: 1.5;
+  --heading-line-height: 1.2;
+  --block-line-height: 1.4;
+
+  //   @supports(--css: variables) {
+  //   :root {
+  //     @include breakpoint(md) {
+  //       --text-base-size: 1em;
+  //       --text-scale-ratio: 1.2;
+  //     }
+  //   }
+  // }
+
+  // capital letters - used in combo with the lhCrop mixin
+  --font-primary-capital-letter: 1;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-black);
+  line-height: var(--body-line-height);
+}
+
+h1, .text-xxl,
+h2, .text-xl,
+h3, .text-lg,
+h4, .text-md,
+h5, .text-sm {
+  margin-top: 0;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-primary);
+  font-style: normal;
+  color: currentColor;
+}
+
+h5 {
+  font-size: var(--text-base-size);
+}
+
+h6 {
+  font-family: var(--font-primary);
+  font-size: var(--text-md);
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+h1 {
+  margin-bottom: var(--space-xs);
+}
+
+h2,
+h3,
+h4,
+p {
+  margin-bottom: var(--space-sm);
+}
+
+h4 {
+  text-transform: uppercase;
+}
+
+// --------------------------------
+
+// (END) Global Editor Code
+
+// --------------------------------
+
+// link style
+a,
+.link {
+  color: var(--color-primary);
+  text-decoration: none;
+  &:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+  }
+}
+
+a.nav__link {
+  //display: inline-block;
+  color: var(--color-black);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+mark {
+  background-color: alpha(var(--color-accent), 0.2);
+  color: inherit;
+}
+
+.text-component {
+  --line-height-multiplier: 1;
+  --text-vspace-multiplier: 1;
+
+  blockquote {
+    padding-left: 1em;
+    border-left: 4px solid var(--color-contrast-low);
+  }
+
+  hr {
+    background: var(--color-contrast-low);
+    height: 1px;
+  }
+
+  figcaption {
+    font-size: var(--text-sm);
+    color: var(--color-contrast-medium);
+  }
+
+  ul {
+    list-style-type: none;
+
+    li::before {
+      content: '\2022';
+      color: var(--color-primary);
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+  }
+
+  &.inverse {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    li::before {
+      color: currentColor;
+    }
+
+    hr {
+      background: alpha(var(--color-white), 0.8);
+    }
+    figcaption,
+    .color-contrast-medium {
+      color: alpha(var(--color-white), 0.8);
+    }
+
+    a,
+    .link {
+      color: alpha(var(--color-white), 0.9);
+      &:hover {
+        color: alpha(var(--color-white), 0.7);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  xmp {
+    display: inline-block;
+    background-color: var(--color-primary-lighter);
+    color: var(--color-contrast-high);
+    padding: var(--space-xxxs);
+    margin-top: 0;
+  }
+}
+
+.article.text-component {
+  // e.g., blog posts
+  --line-height-multiplier: 1.13; // increase article line-height
+  --text-vspace-multiplier: 1.2; // increase vertical spacing
+}
+
+.color-primary {
+  color: var(--color-primary);
+}
+
+.color-contrast-medium {
+  color: var(--color-contrast-medium);
+}

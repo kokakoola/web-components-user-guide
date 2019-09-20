@@ -1,0 +1,55 @@
+:root {
+  // radius
+  --radius-lg: 290486px;
+}
+
+body {
+  background-color: var(--color-bg, white);
+}
+
+//card border
+.border {
+  border: none;
+}
+
+@include breakpoint(md, 'only screen') {
+  .border {
+    border: 1px solid #d3d3d4;
+  }
+
+  @supports (--css: variables) {
+    .border {
+      border: 1px solid var(--color-contrast-low);
+    }
+  }
+}
+
+// card equal width helper
+.card--flex {
+  flex: 1;
+}
+
+// card block min-width
+
+.nav__link.is-active {
+  font-weight: 700;
+  position: relative;
+  &::after {
+    top: 100%;
+    left: 50%;
+    content: ' ';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-top: 15px solid var(--color-contrast-lower);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    z-index: 1;
+    margin-left: -15px;
+  }
+}
+
+e-icon + span {
+  margin-left: var(--space-sm);
+}
