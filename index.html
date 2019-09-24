@@ -2,91 +2,413 @@
 <html dir="ltr" lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
     <title>Elektrilevi UI</title>
-    <link rel="stylesheet" href="/build/elektrilevi-ui.css" type="text/css" media="all" />
+    <link
+      rel="stylesheet"
+      href="/build/elektrilevi-ui.css"
+      type="text/css"
+      media="all"
+    />
     <script type="module" src="/build/elektrilevi-ui.esm.js"></script>
   </head>
   <body>
-  <script>
-    domI18n({
-      languages: ['en', 'fr', 'ru']
-    });
-  </script>
-      <e-button-group>
-      <e-button size="sm" id="en-btn">EE</e-button>
-      <e-button size="sm"  id="fr-btn">RU</e-button>
-      <e-button size="sm"  id="ru-btn">Hi</e-button>
-      </e-button-group>
+    <e-header>
+      <header slot="desktop-header">
+        <e-section background-color="light" header>
+          <e-header-block is-topbar is-bold>
+            <e-dropdown
+              slot="right"
+              text="Eesti keel"
+              type="text"
+              align="right"
+              caret-color="primary"
+            >
+              <div id="ee-btn">Eesti keel »</div>
+              <div id="en-btn">Inglise keel»</div>
+            </e-dropdown>
+          </e-header-block>
+        </e-section>
+        <e-section background-color="white" header>
+          <e-header-block is-header>
+            <e-logo slot="left" logo="elv-horizontal-color"></e-logo>
+            <e-navbar selected="1" slot="left">
+              <e-nav text="Komponendid"></e-nav>
+              <e-nav text="Stiiliraamat"></e-nav>
+              <e-nav text="Prototüübid" has-submenu></e-nav>
+            </e-navbar>
+            <e-button
+              slot="right"
+              has-icon
+              color="gradient-secondary"
+              size="sm"
+            >
+              <span>Lae alla</span>
+              <e-icon icon="arrow"></e-icon>
+            </e-button>
+          </e-header-block>
+        </e-section>
+      </header>
+      <header slot="mobile-header">
+        <e-section background-color="white" header>
+          <e-header-block is-header>
+            <e-logo slot="left" logo="elv-slogan-horizontal-color"></e-logo>
+            <e-button has-icon slot="right" color="primary" size="xs">
+              <e-icon icon="person" size="xs"></e-icon>
+              <span>Iseteenindus</span>
+            </e-button>
+            <e-mobile-nav
+              has-search
+              has-icon-button
+              open-icon="menu"
+              close-icon="close"
+              icon-size="xs"
+              slot="right"
+            >
+              <ul style="display: none">
+                <li>
+                  <a href="#">Liitumised</a>
+                  <ul>
+                    <li>
+                      <a href="#">Leping tarbijale</a>
+                      <ul>
+                        <li><a href="#">Võrguleping</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Muud juhud</a>
+                      <ul>
+                        <li><a>Ühisostult üksikostule</a></li>
+                        <li><a>Võrkude võõrandamine</a></li>
+                        <li><a>Tallinna vanapinge kliendile</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Leping Tarbijale</a>
+                      <ul>
+                        <li><a>Ühisostult üksikostule</a></li>
+                        <li><a>Võrkude võõrandamine</a></li>
+                        <li><a>Tallinna vanapinge kliendile</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="#"> Teenused</a></li>
+                <li>
+                  <a href="#"> Katkestused</a>
+                  <ul>
+                    <li>
+                      <a href="#">Leping tarbijale</a>
+                      <ul>
+                        <li><a href="#">Võrguleping</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Muud juhud</a>
+                      <ul>
+                        <li><a>Ühisostult üksikostule</a></li>
+                        <li><a>Võrkude võõrandamine</a></li>
+                        <li><a>Tallinna vanapinge kliendile</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Leping Tarbijale</a>
+                      <ul>
+                        <li><a>Ühisostult üksikostule</a></li>
+                        <li><a>Võrkude võõrandamine</a></li>
+                        <li><a>Tallinna vanapinge kliendile</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="#">Abiinfo</a></li>
+              </ul>
+              <div slot="languages" class="padding-x-md padding-y-sm">
+                <a>Eesti keel</a>
+                <a>Eesti keel</a>
+                <a>Eesti keel</a>
+              </div>
+              <hr />
+              <div slot="searchbox" class=" padding-x-md padding-y-sm">
+                <form>
+                  <e-input
+                    class="width-100%"
+                    type="search"
+                    placeholder="Otsing"
+                    is-full-width
+                  ></e-input>
+                </form>
+              </div>
+            </e-mobile-nav>
+          </e-header-block>
+        </e-section>
+      </header>
+    </e-header>
 
-      <e-section overlay-color="primary" overlay-position="48%" no-overflow>
-      <e-section-block background-color="primary-light" is-diagonal diagonal-space>
-          <h1  data-translatable>Rikkeinfo // Лорем ипсум долор // जनित डाले। पहोचने</h1>
-          <p class="margin-bottom-md" data-translatable>
-            Meile teadaolevad rikked leiad katkestuste kaardilt ning samuti teavitame Sind sellest SMS-i teel. Kui oled SMS-i juba saanud, siis meid täiendavalt rikkest teavitama ei pea. // Лорем ипсум долор сит амет, номинави лобортис вис ин. Еам харум долорем волутпат еи. Меа ад иуварет продессет, ребум пауло афферт не хас. Ан еум интерессет реформиданс, еа нуллам постеа яуи. Ат сит утрояуе либерависсе, вим аутем витае еуисмод ет, дицтас нусяуам пер ех. Алияуип перпетуа петентиум вис ин, ад вел постеа алияуип. //  जनित डाले। पहोचने लाभान्वित सुचनाचलचित्र कलइस मानसिक गयेगया औषधिक मेमत सुचना अनुवादक क्षमता। मार्गदर्शन करती बनाति संस्क्रुति आंतरकार्यक्षमता पहेला पढाए जिम्मे विकसित विज्ञान एकत्रित बेंगलूर व्याख्या वर्ष कराना होभर व्यवहार पुर्णता अविरोधता सक्षम लाभो भाषाओ भारतीय उपेक्ष व्यवहार हुएआदि अनुवाद प्रतिबध पहोच। बिना बनाने अन्य ऎसाजीस गटकउसि गोपनीयता वातावरण परिभाषित सकती खरिदे
-          </p>
+    <!-- Intro -->
+    <e-section overlay-color="primary" overlay-position="48%" no-overflow>
+      <e-section-block
+        background-color="primary-light"
+        is-diagonal
+        diagonal-space
+      >
+        <h1 data-translatable>Stiilisüsteem</h1>
+        <p class="no-margin-bottom" data-translatable>
+          Elektrilevi stiilisüsteem võimaldab sul luua eelstiilitud komponentide
+          abil kiirelt ja lihtsalt endale vajalikku kasutajaliidest.
+        </p>
+
       </e-section-block>
       <e-section-block
         background-image="build/assets/images/elv/data_2.jpg"
         is-diagonal
+      >
+      </e-section-block>
+    </e-section>
+
+    <e-tabs position="center" selected-tab="0">
+      <e-tab title="Kasutajale">
+        <!-- Mida saad -->
+        <e-section
+          background-color="white"
+          overlay-color="gray"
+          overlay-position="95%"
+          vertical-space
+          no-overflow
         >
-      </e-section-block>
-    </e-section>
-    <e-section background-color="white" overlay-color="gray" overlay-position="95%" vertical-space no-overflow>
-      <e-section-block>
-      <h2>Anna katkestusest teada</h2>
-      <p>
-        Kui katkestuse kohta ei ole Sulle sõnumit saabunud, siis anna elektrikatkestusest teada, helistades numbril 1343. Rikke teavitamisest piisab ühest korrast.
-      </p>
-      <p>
-        Rikketelefonile helistades kuuled esmalt automaatvastajast infot meile teadaolevatest riketest.
-      </p>
-      <p>
-        Kui automaatvastaja sõnum ei anna vastust Sinu piirkonna rikke kohta, jää palun liinile ja Sind ühendatakse klienditeenindusega.
-      </p>
-      </e-list>
-      </e-section-block>
-      <e-section-block class="text-center">
-      <h6>
-      <br />
-      Rikketelefon 1343
-    </h6>
-    <e-button has-divider has-icon color="gradient-secondary">
-      <span>Teatan rikkest</span>
-      <span>
-        <e-icon icon="caret-right" size="xs"></e-icon>
-      </span>
-    </e-button>
-      </e-section-block>
-    </e-section>
+          <e-section-block>
+            <h2>Mida sa saad</h2>
+            <p>
+              Stiilisüsteem sisaldab kõike vajalikku veebiprojekti loomiseks:
+              <e-list type="icon">
+                <li><e-icon icon="tick" color="primary"></e-icon><span>Fondid ja tüpograafia</span> </li>
+                <li><e-icon icon="tick" color="primary"></e-icon><span>Ikoonid</span> </li>
+                <li><e-icon icon="tick" color="primary"></e-icon><span>Fondid ja tüpograafia</span> </li>
+                <li><e-icon icon="tick" color="primary"></e-icon><span>Värvid ja gradiendid</span> </li>
+                <li><e-icon icon="tick" color="primary"></e-icon><span>Grid ja flex layout</span> </li>
+                <li><e-icon icon="tick" color="primary"></e-icon><span>Breakpoindid mobiilivaadete jaoks</span> </li>
+                <li><e-icon icon="tick" color="primary"></e-icon><span>Eelstiilitud komponendid</span> </li>
+              </e-list>
+            </p>
+            <p class="text-small color-contrast-medium">
+              * Käesolev leht on koostatud plain-htmlis kasutades stiilisüsteemi
+            </p>
+          </e-section-block>
+          <e-section-block class="text-center">
+            <e-button
+              type="link"
+              has-divider
+              has-icon
+              color="gradient-secondary"
+              href="http://ux.netgroupdigital.com/elektrilevi/storybook/"
+              target="_blank"
+            >
+              <span>Vaata komponente</span>
+              <span>
+                <e-icon icon="caret-right" size="xs"></e-icon>
+              </span>
+            </e-button>
+          </e-section-block>
+        </e-section>
 
-    <script src="dom-i18n.min.js"></script>
+        <!-- Kuidas kasutada -->
+        <e-section no-overflow>
+          <e-section-block
+            background-image="/assets/setup.png"
+            has-image-overlay
+          >
+            <div class="flex items-center justify-center flex-column">
+              <e-button
+                color="gradient-secondary"
+                type="link"
+                href="https://gist.github.com/kokakoola/0b229893253c0d4743cd29cbc792e036"
+                target="_blank"
+                >Gist</e-button
+              >
+            </div>
+          </e-section-block>
+          <e-section-block background-color="primary-light">
+            <h2>Kuidas kasutada?</h2>
+            <e-list type="ol">
+              <li>Laed alla zipi, mis sisaldab build kausta.</li>
+              <li>
+                Oma projekti päises lisad ühe javascripti ja ühe css faili.
+              </li>
+              <li>
+                Valid komponentide teegist vajaliku komponendi või templiidi ja
+                kopeerid selle näidiskoodi enda projekti. Süntaks on sama, mis tavalisel html-l, komponenti eristab prefix e- (nt 'e-button').
+              </li>
+              <li>
+                Stiilimiseks lisad tagi sisse sobivad propsid (nt 'e-button color="gradient-secondary"').
+              </li>
+              <li>Jooksutad üle serveri.</li>
+            </e-list>
+            <p class="no-margin-bottom">* Raamis on süsteem juba lisatud, komponente saab otse kasutada, skripte lisada pole vaja.</p>
+          </e-section-block>
+        </e-section>
+        <e-section background-color="white">
+          <div class="container padding-y-xl padding-x-xxl">
+            <h2 class="text-center margin-bottom-lg">Keskkonna agnostiline</h2>
+            <div class="equal-width-items text-center flex-gap-lg">
+              <div>
+                <e-icon icon="tag-lg" background="gradient-secondary"> </e-icon>
+                <h5 class="margin-top-md margin-bottom-sm">Web components</h5>
+                <p>
+                  Iseseisvad stiilitud html-tag-id, mis käituvad nagu tavalised
+                  html-tagid.
+                </p>
+              </div>
+              <div>
+                <e-icon icon="select-lg" background="gradient-secondary">
+                </e-icon>
+                <h5 class="margin-top-md margin-bottom-sm">
+                  ES6
+                </h5>
+                <p>
+                  Keerukamad komponendid sisaldavad javascripti, mis on
+                  kirjutatud ES6 ja seega keskkonna agnostilised ega nõua ühtegi
+                  lisasõltuvust.
+                </p>
+              </div>
+              <div>
+                <e-icon icon="shield-lg" background="gradient-secondary">
+                </e-icon>
+                <h5 class="margin-top-md margin-bottom-sm">
+                  Shadow DOM
+                </h5>
+                <p>
+                  Komponendid sisaldavad oma stiile ja javascripti, ega ole
+                  mõjutatud muust projekti stiilist. Võid lisada oma stiile või
+                  kasutada komponente oma varasemas projektis ilma et stiilid
+                  konfliktiksid.
+                </p>
+              </div>
+              <div>
+                <e-icon icon="network-lg" background="gradient-secondary">
+                </e-icon>
+                <h5 class="margin-top-md margin-bottom-sm">
+                  CSS-muutujad
+                </h5>
+                <p>
+                  Projekt kasutab globaalseid css-muutujaid, mis vastavad
+                  stiilile ja on kasutatavad erilahenduste korral (värvid,
+                  tüpograafia).
+                </p>
+              </div>
+              <div>
+                <e-icon icon="stabilizer-lg" background="gradient-secondary">
+                </e-icon>
+                <h5 class="margin-top-md margin-bottom-sm">
+                  Adaptiivne
+                </h5>
+                <p>
+                  Globaalne grid süsteem on mobile first ehk vaikimisi
+                  adaptiivne eri ekraanisuurustel.
+                </p>
+              </div>
+            </div>
+          </div>
+        </e-section>
+      </e-tab>
+      <e-tab title="Arendajale">
+        <div class="text-component padding-md">
+          <p class="no-margin-bottom" data-translatable>
+          Süsteemi olulisus seisneb ühtse käekirja hoidmises terve Elektrilevi UI osas sõltumata disaineri või arendaja suvast. Ühe ettevõtte stiil peab kasutama samu stiilielemente läbi kogu kasutajaliidese - nupud, värvid, fondid, ikonograafia. Kui need on eelstiilitud, ei teki võimalust stiiliga eksimiseks, samuti
+        </p> IE 11, lightweight (971kb), typescript, plugandplay</div>
+      </e-tab>
+    </e-tabs>
 
-    <script>
-      var enButton = document.getElementById('en-btn');
-      var frButton = document.getElementById('fr-btn');
-        var ruButton = document.getElementById('ru-btn');
-      var i18n = domI18n({
-        selector: '[data-translatable]',
-        separator: ' // ',
-        languages: ['en', 'fr', 'ru'],
-        defaultLanguage: 'en'
-      });
-
-      enButton.onclick = function () {
-        i18n.changeLanguage('en');
-      };
-
-      frButton.onclick = function () {
-        i18n.changeLanguage('fr');
-      };
-
-      ruButton.onclick = function () {
-        i18n.changeLanguage('ru');
-      };
-
-      document.body.style.display = 'block';
-
-    </script>
+    <!-- footer -->
+    <footer>
+      <e-section background-color="gradient-primary">
+        <div class="container">
+          <div
+            class="grid padding-sm grid--divider divider-inverted divider-hidden-xs"
+          >
+            <div
+              class="col-6@xs col-3@md flex justify-center justify-start@md flex-center padding-xs"
+            >
+              <e-logo logo="elv-horizontal-white" size="lg"></e-logo>
+            </div>
+            <div
+              class="col-6@xs col-3@md flex justify-center flex-center padding-xs"
+            >
+              <e-icon
+                icon="builder-lg"
+                size="md"
+                class="padding-right-sm"
+              ></e-icon>
+              <p class="text-bold">
+                <a href="#" target="_blank">Tehniline tugi ja tellimused »</a>
+              </p>
+            </div>
+            <div
+              class="col-6@xs col-3@md flex justify-center flex-center padding-xs"
+            >
+              <e-icon
+                icon="tools-lg"
+                size="md"
+                class="padding-right-sm"
+              ></e-icon>
+              <p>
+                Teata rikkest 24h
+                <br />
+                <span class="text-xl text-bold">1343</span>
+              </p>
+            </div>
+            <div
+              class="col-6@xs col-3@md flex justify-center flex-center padding-xs"
+            >
+              <e-icon
+                icon="support-lg"
+                size="md"
+                class="padding-right-sm"
+              ></e-icon>
+              <p>
+                Tehnoloogiad<br />
+                E-R 8.00-18.00<br />
+                <a href="#" class="text-bold">tel 777 1545</a><br />
+                <a href="#" class="text-bold">info@elektrilevi.ee</a>
+              </p>
+            </div>
+          </div>
+          <hr class="hr-inverted" />
+          <div class="grid padding-sm line-height-2">
+            <div
+              class="col-4@md flex flex-center justify-start@md justify-center flex-order-1"
+            >
+              <span class="text-sm"
+                >@ 2019 Elektrilevi. Kõik õigused kaitstud.</span
+              >
+            </div>
+            <div
+              class="col-4@md flex flex-center justify-center flex-gap-md text-sm"
+            >
+              <a href="#">Privacy Policy</a>
+              <div>|</div>
+              <a href="#">Terms & Conditions</a>
+              <div>|</div>
+              <a href="#">Contact</a>
+            </div>
+            <div
+              class="col-4@md flex flex-center justify-end@md justify-center flex-gap-xs text-xs"
+            >
+              <a href="#" target="_blank">
+                <e-icon icon="facebook" size="xs"></e-icon>
+              </a>
+              <a href="#" target="_blank">
+                <e-icon icon="instagram" size="xs"></e-icon>
+              </a>
+              <a href="#" target="_blank">
+                <e-icon icon="linkedin" size="xs"></e-icon>
+              </a>
+            </div>
+          </div>
+        </div>
+      </e-section>
+    </footer>
   </body>
 </html>
